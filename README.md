@@ -232,11 +232,12 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 
 # Let's install the bot.
 cd $HOME
-git clone https://github.com/SEEDTEAM/TeleSeed.git -b supergroups
-cd TeleSeed
+git clone https://github.com/imashiam/new.git -b supergroups
+cd new
 chmod +x launch.sh
 ./launch.sh install
-./launch.sh # Enter a phone number & confirmation code.
+./launch.sh
+ # Enter a phone number & confirmation code.
 ```
 ### One command
 To install everything in one command (useful for VPS deployment) on Debian-based distros, use:
