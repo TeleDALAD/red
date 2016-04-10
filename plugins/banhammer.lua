@@ -136,7 +136,7 @@ local function run(msg, matches)
 local support_id = msg.from.id
  if matches[1]:lower() == 'id' and msg.to.type == "chat" or msg.to.type == "user" then
     if msg.to.type == "user" then
-      return "Bot 🆔: "..msg.to.id.. "\nYour 🆔: "..msg.from.id
+      return "Bot Id: "..msg.to.id.. "\nYour Id: "..msg.from.id
     end
     if type(msg.reply_id) ~= "nil" then
       local print_name = user_print_name(msg.from):gsub("‮", "")
@@ -146,7 +146,7 @@ local support_id = msg.from.id
     elseif matches[1]:lower() == 'id' then
       local name = user_print_name(msg.from)
       savelog(msg.to.id, name.." ["..msg.from.id.."] used /id ")
-      return "🔘Group 🆔 for ♦" ..string.gsub(msg.to.print_name, "_", " ").. "♦:\n"..msg.to.id
+      return "Group Id for " ..string.gsub(msg.to.print_name, "_", " ").. ":\n"..msg.to.id
     end
   end
   if matches[1]:lower() == 'kickme' and msg.to.type == "chat" then-- /kickme
